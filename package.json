@@ -1,0 +1,21 @@
+{
+  "name": "karl-ai-video-portfolio",
+  "version": "1.0.0",
+  "description": "Karl - AI Video Editor Portfolio",
+  "scripts": {
+    "dev": "npx serve . -l 3000",
+    "build": "echo 'Static site - no build step required'",
+    "preview": "npx serve . -l 3000"
+  },
+  "keywords": [
+    "portfolio",
+    "ai-video",
+    "video-editor",
+    "generative-ai"
+  ],
+  "author": "Karl",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}
