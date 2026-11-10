@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 382" width="680" height="382">
+  <defs>
+    <linearGradient id="velareBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="680" height="382" fill="url(#velareBg)"/>
+  <text x="340" y="170" font-family="Space Grotesk, sans-serif" font-size="48" font-weight="700" fill="#67E8F9" text-anchor="middle">Velare</text>
+  <text x="340" y="230" font-family="Inter, sans-serif" font-size="20" fill="#A1A1AA" text-anchor="middle">Pixar-Style AI Animation</text>
+  <text x="340" y="280" font-family="Inter, sans-serif" font-size="14" fill="#71717A" text-anchor="middle">Runway Gen-3 • Luma Dream Machine • Pixar Style</text>
+</svg>

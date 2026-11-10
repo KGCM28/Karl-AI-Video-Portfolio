@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <circle cx="960" cy="540" r="120" fill="none" stroke="#3B82F6" stroke-width="4" opacity="0.6"/>
+  <polygon points="900,480 1080,540 900,600" fill="#3B82F6" opacity="0.9"/>
+  <text x="960" y="580" font-family="system-ui, sans-serif" font-size="48" font-weight="600" fill="#F8FAFC" text-anchor="middle">Click to Play</text>
+  <text x="960" y="620" font-family="system-ui, sans-serif" font-size="24" fill="#94A3B8" text-anchor="middle">Karl Ghian Mercado • AI Video Editor</text>
+</svg>
