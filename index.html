@@ -18,12 +18,13 @@
             </a>
             <div class="nav-actions">
                 <div class="nav-links">
+                    <a href="#hooks" class="nav-link">Hook Lab</a>
                     <a href="#work" class="nav-link">Work</a>
                     <a href="#services" class="nav-link">Services</a>
                     <a href="#about" class="nav-link">About</a>
                     <a href="#contact" class="nav-link nav-link--contact">Contact</a>
                 </div>
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" aria-pressed="true">
+                <!-- <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" aria-pressed="true">
                 <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                     <circle cx="12" cy="12" r="5"></circle>
                     <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -38,13 +39,14 @@
                 <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                 </svg>
-            </button>
+            </button> -->
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
                 <span class="hamburger"></span>
             </button>
         </nav>
         <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
             <a href="#work" class="mobile-nav-link">Work</a>
+            <a href="#hooks" class="mobile-nav-link">Hook Lab</a>
             <a href="#services" class="mobile-nav-link">Services</a>
             <a href="#about" class="mobile-nav-link">About</a>
             <a href="#contact" class="mobile-nav-link">Contact</a>
@@ -118,7 +120,7 @@
 
                     <!-- ROW 6: Call-to-Action -->
                     <div class="hero-cta animate-hero animate-delay-6">
-                        <a href="#work" class="btn btn-primary">
+                        <a href="#hooks" class="btn btn-primary">
                             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                             <span>Watch My Hooks</span>
                         </a>
@@ -133,68 +135,401 @@
             </div>
         </section>
 
+
+      
+        
+
+        <!-- Hook Lab: 32 short-form video hooks -->
+        <section class="hook-lab" id="hooks" aria-labelledby="hooks-heading">
+            <div class="container">
+                <div class="hook-section-header">
+                    <h2 class="hook-display" id="hooks-heading">HOOK <span>LAB</span></h2>
+                    <p class="hook-description">32 scroll-stopping video hooks across health and direct-to-consumer creative styles. Explore the first seconds that spark curiosity.</p>
+                </div>
+                <div class="hook-filters" role="group" aria-label="Filter hooks by style">
+                    <button type="button" class="hook-filter" data-g="all" aria-pressed="true">All <span data-count="all">32</span></button>
+                    <button type="button" class="hook-filter" data-g="anim" aria-pressed="false">Pixar &amp; Animated <span data-count="anim">12</span></button>
+                    <button type="button" class="hook-filter" data-g="real" aria-pressed="false">UGC &amp; POV <span data-count="real">11</span></button>
+                    <button type="button" class="hook-filter" data-g="med" aria-pressed="false">3D Medical <span data-count="med">5</span></button>
+                    <button type="button" class="hook-filter" data-g="cine" aria-pressed="false">Cinematic &amp; Native <span data-count="cine">4</span></button>
+                </div>
+                <div class="hook-carousel">
+                    <div class="hook-rail" id="hookGrid" role="region" aria-roledescription="carousel" aria-label="Video hook previews" tabindex="0">
+                    <figure class="hook-card" data-g="anim">
+                        <img class="hook-poster" src="assets/hooks/S10.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/S10.mp4" muted loop playsinline preload="none" aria-label="Gut health hook, Paper cutout"></video>
+                        <div class="hook-overlay ts-hormozi yellow" aria-hidden="true"><span class="hook-headline">39 trillion gut soldiers just <em>quit</em></span></div>
+                        <span class="hook-id" aria-hidden="true">S10</span>
+                        <figcaption class="hook-caption"><strong>Gut health</strong><span>Paper cutout</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Gut health hook, Paper cutout" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="anim">
+                        <img class="hook-poster" src="assets/hooks/H09.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/H09.mp4" muted loop playsinline preload="none" aria-label="Lower back pain hook, Crochet / yarn"></video>
+                        <div class="hook-overlay ts-type" aria-hidden="true"><span class="hook-headline">I'm your <em>lower back</em>. We need to talk.</span></div>
+                        <span class="hook-id" aria-hidden="true">H09</span>
+                        <figcaption class="hook-caption"><strong>Lower back pain</strong><span>Crochet / yarn</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Lower back pain hook, Crochet / yarn" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="med">
+                        <img class="hook-poster" src="assets/hooks/S03.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/S03.mp4" muted loop playsinline preload="none" aria-label="Heart · cholesterol hook, Medical render"></video>
+                        <div class="hook-overlay ts-stroke yellow" aria-hidden="true"><span class="hook-headline">30 years of <em>fried food</em> in your arteries</span></div>
+                        <span class="hook-id" aria-hidden="true">S03</span>
+                        <figcaption class="hook-caption"><strong>Heart · cholesterol</strong><span>Medical render</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Heart · cholesterol hook, Medical render" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="anim">
+                        <img class="hook-poster" src="assets/hooks/H06.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/H06.mp4" muted loop playsinline preload="none" aria-label="Senior dog joints hook, Pixar 3D"></video>
+                        <div class="hook-overlay ts-marker" aria-hidden="true"><span class="hook-headline">He's not lazy. His joints are <em>starving</em>.</span></div>
+                        <span class="hook-id" aria-hidden="true">H06</span>
+                        <figcaption class="hook-caption"><strong>Senior dog joints</strong><span>Pixar 3D</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Senior dog joints hook, Pixar 3D" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="anim">
+                        <img class="hook-poster" src="assets/hooks/S08.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/S08.mp4" muted loop playsinline preload="none" aria-label="Heel pain hook, Tilt-shift miniature"></video>
+                        <div class="hook-overlay ts-type" aria-hidden="true"><span class="hook-headline">First steps feel like <em>nails</em>?</span></div>
+                        <span class="hook-id" aria-hidden="true">S08</span>
+                        <figcaption class="hook-caption"><strong>Heel pain</strong><span>Tilt-shift miniature</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Heel pain hook, Tilt-shift miniature" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="anim">
+                        <img class="hook-poster" src="assets/hooks/S01.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/S01.mp4" muted loop playsinline preload="none" aria-label="Bone &amp; joint hook, 3D skeleton"></video>
+                        <div class="hook-overlay ts-hormozi" aria-hidden="true"><span class="hook-headline">Day <em>365</em> without magnesium</span></div>
+                        <span class="hook-id" aria-hidden="true">S01</span>
+                        <figcaption class="hook-caption"><strong>Bone &amp; joint</strong><span>3D skeleton</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Bone &amp; joint hook, 3D skeleton" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="anim">
+                        <img class="hook-poster" src="assets/hooks/H07.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/H07.mp4" muted loop playsinline preload="none" aria-label="Swollen legs hook, Claymation"></video>
+                        <div class="hook-overlay ts-hormozi" aria-hidden="true"><span class="hook-headline">What 8 hours of sitting does to your <em>legs</em></span></div>
+                        <span class="hook-id" aria-hidden="true">H07</span>
+                        <figcaption class="hook-caption"><strong>Swollen legs</strong><span>Claymation</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Swollen legs hook, Claymation" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="real">
+                        <img class="hook-poster" src="assets/hooks/P06.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/P06.mp4" muted loop playsinline preload="none" aria-label="Any DTC · fake-negative hook, POV homemade"></video>
+                        <div class="hook-overlay ts-tiktok" aria-hidden="true"><span class="hook-headline">Why my husband is <em>mad</em> I keep buying this</span></div>
+                        <span class="hook-id" aria-hidden="true">P06</span>
+                        <figcaption class="hook-caption"><strong>Any DTC · fake-negative</strong><span>POV homemade</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Any DTC · fake-negative hook, POV homemade" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="anim">
+                        <img class="hook-poster" src="assets/hooks/C09.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/C09.mp4" muted loop playsinline preload="none" aria-label="Muscle pain · statins hook, Pixar mechanism"></video>
+                        <div class="hook-overlay ts-comic" aria-hidden="true"><span class="hook-headline">Muscle pain? Blame your <em>cholesterol pills</em></span></div>
+                        <span class="hook-id" aria-hidden="true">C09</span>
+                        <figcaption class="hook-caption"><strong>Muscle pain · statins</strong><span>Pixar mechanism</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Muscle pain · statins hook, Pixar mechanism" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="med">
+                        <img class="hook-poster" src="assets/hooks/H04.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/H04.mp4" muted loop playsinline preload="none" aria-label="Knee pain · men 50+ hook, 3D medical"></video>
+                        <div class="hook-overlay ts-stroke" aria-hidden="true"><span class="hook-headline">Knees sound like a <em>rusty door</em>?</span></div>
+                        <span class="hook-id" aria-hidden="true">H04</span>
+                        <figcaption class="hook-caption"><strong>Knee pain · men 50+</strong><span>3D medical</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Knee pain · men 50+ hook, 3D medical" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="anim">
+                        <img class="hook-poster" src="assets/hooks/S06.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/S06.mp4" muted loop playsinline preload="none" aria-label="Back pain hook, Fashion doll"></video>
+                        <div class="hook-overlay ts-tiktok" aria-hidden="true"><span class="hook-headline"><em>Back pain</em> keeping you up at night?</span></div>
+                        <span class="hook-id" aria-hidden="true">S06</span>
+                        <figcaption class="hook-caption"><strong>Back pain</strong><span>Fashion doll</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Back pain hook, Fashion doll" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="anim">
+                        <img class="hook-poster" src="assets/hooks/S09.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/S09.mp4" muted loop playsinline preload="none" aria-label="Menopause hook, Anime"></video>
+                        <div class="hook-overlay ts-comic" aria-hidden="true"><span class="hook-headline"><em>Hot flashes</em> in meetings?</span></div>
+                        <span class="hook-id" aria-hidden="true">S09</span>
+                        <figcaption class="hook-caption"><strong>Menopause</strong><span>Anime</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Menopause hook, Anime" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="real">
+                        <img class="hook-poster" src="assets/hooks/P02.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/P02.mp4" muted loop playsinline preload="none" aria-label="Lower back hook, POV homemade"></video>
+                        <div class="hook-overlay ts-neon" aria-hidden="true"><span class="hook-headline">If putting on socks feels like <em>this</em>…</span></div>
+                        <span class="hook-id" aria-hidden="true">P02</span>
+                        <figcaption class="hook-caption"><strong>Lower back</strong><span>POV homemade</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Lower back hook, POV homemade" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="real">
+                        <img class="hook-poster" src="assets/hooks/P01.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/P01.mp4" muted loop playsinline preload="none" aria-label="Leg cramps hook, POV homemade"></video>
+                        <div class="hook-overlay ts-tiktok" aria-hidden="true"><span class="hook-headline">Calf locks up like a <em>fist</em> at night?</span></div>
+                        <span class="hook-id" aria-hidden="true">P01</span>
+                        <figcaption class="hook-caption"><strong>Leg cramps</strong><span>POV homemade</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Leg cramps hook, POV homemade" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="cine">
+                        <img class="hook-poster" src="assets/hooks/H08.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/H08.mp4" muted loop playsinline preload="none" aria-label="Immunity hook, News street interview"></video>
+                        <div class="hook-overlay ts-dark" aria-hidden="true"><span class="hook-headline">Why 60+ put <em>this</em> under their tongue</span></div>
+                        <span class="hook-id" aria-hidden="true">H08</span>
+                        <figcaption class="hook-caption"><strong>Immunity</strong><span>News street interview</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Immunity hook, News street interview" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="cine">
+                        <img class="hook-poster" src="assets/hooks/C01.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/C01.mp4" muted loop playsinline preload="none" aria-label="Diabetes hook, Cinematic macro"></video>
+                        <div class="hook-overlay ts-type" aria-hidden="true"><span class="hook-headline">Diabetics drink this <em>bitter</em> tea before breakfast</span></div>
+                        <span class="hook-id" aria-hidden="true">C01</span>
+                        <figcaption class="hook-caption"><strong>Diabetes</strong><span>Cinematic macro</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Diabetes hook, Cinematic macro" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="anim">
+                        <img class="hook-poster" src="assets/hooks/S05.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/S05.mp4" muted loop playsinline preload="none" aria-label="Liver detox hook, Pixar 3D"></video>
+                        <div class="hook-overlay ts-marker" aria-hidden="true"><span class="hook-headline">Your <em>liver</em> after the holidays</span></div>
+                        <span class="hook-id" aria-hidden="true">S05</span>
+                        <figcaption class="hook-caption"><strong>Liver detox</strong><span>Pixar 3D</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Liver detox hook, Pixar 3D" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="med">
+                        <img class="hook-poster" src="assets/hooks/S04.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/S04.mp4" muted loop playsinline preload="none" aria-label="Brain fog hook, Medical render"></video>
+                        <div class="hook-overlay ts-neon" aria-hidden="true"><span class="hook-headline">Forgot why you walked into the <em>room</em>?</span></div>
+                        <span class="hook-id" aria-hidden="true">S04</span>
+                        <figcaption class="hook-caption"><strong>Brain fog</strong><span>Medical render</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Brain fog hook, Medical render" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="real">
+                        <img class="hook-poster" src="assets/hooks/P08.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/P08.mp4" muted loop playsinline preload="none" aria-label="Migraine hook, POV homemade"></video>
+                        <div class="hook-overlay ts-neon" aria-hidden="true"><span class="hook-headline">If your vision does <em>this</em> before a migraine…</span></div>
+                        <span class="hook-id" aria-hidden="true">P08</span>
+                        <figcaption class="hook-caption"><strong>Migraine</strong><span>POV homemade</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Migraine hook, POV homemade" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="anim">
+                        <img class="hook-poster" src="assets/hooks/H02.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/H02.mp4" muted loop playsinline preload="none" aria-label="Nerve pain hook, Pixar 3D"></video>
+                        <div class="hook-overlay ts-comic" aria-hidden="true"><span class="hook-headline">3 signs you have <em>nerve pain</em></span></div>
+                        <span class="hook-id" aria-hidden="true">H02</span>
+                        <figcaption class="hook-caption"><strong>Nerve pain</strong><span>Pixar 3D</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Nerve pain hook, Pixar 3D" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="real">
+                        <img class="hook-poster" src="assets/hooks/P03.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/P03.mp4" muted loop playsinline preload="none" aria-label="Bloating hook, POV homemade"></video>
+                        <div class="hook-overlay ts-hormozi" aria-hidden="true"><span class="hook-headline">Ate a salad. Still can't <em>button my jeans</em>.</span></div>
+                        <span class="hook-id" aria-hidden="true">P03</span>
+                        <figcaption class="hook-caption"><strong>Bloating</strong><span>POV homemade</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Bloating hook, POV homemade" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="real">
+                        <img class="hook-poster" src="assets/hooks/H03.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/H03.mp4" muted loop playsinline preload="none" aria-label="Bloating hook, UGC mirror selfie"></video>
+                        <div class="hook-overlay ts-tiktok" aria-hidden="true"><span class="hook-headline">Jeans fit at 8 AM… <em>not at 8 PM</em>?</span></div>
+                        <span class="hook-id" aria-hidden="true">H03</span>
+                        <figcaption class="hook-caption"><strong>Bloating</strong><span>UGC mirror selfie</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Bloating hook, UGC mirror selfie" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="real">
+                        <img class="hook-poster" src="assets/hooks/C07.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/C07.mp4" muted loop playsinline preload="none" aria-label="Bloating hook, UGC kitchen"></video>
+                        <div class="hook-overlay ts-tiktok" aria-hidden="true"><span class="hook-headline">Women 40+ put this <em>yellow spice</em> in their water</span></div>
+                        <span class="hook-id" aria-hidden="true">C07</span>
+                        <figcaption class="hook-caption"><strong>Bloating</strong><span>UGC kitchen</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Bloating hook, UGC kitchen" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="cine">
+                        <img class="hook-poster" src="assets/hooks/C02.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/C02.mp4" muted loop playsinline preload="none" aria-label="High blood pressure hook, Documentary"></video>
+                        <div class="hook-overlay ts-stroke" aria-hidden="true"><span class="hook-headline">The <em>2-minute</em> Okinawa night habit</span></div>
+                        <span class="hook-id" aria-hidden="true">C02</span>
+                        <figcaption class="hook-caption"><strong>High blood pressure</strong><span>Documentary</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play High blood pressure hook, Documentary" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="cine">
+                        <img class="hook-poster" src="assets/hooks/C06.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/C06.mp4" muted loop playsinline preload="none" aria-label="Sleep hook, Cinematic"></video>
+                        <div class="hook-overlay ts-hormozi" aria-hidden="true"><span class="hook-headline">Fall asleep in <em>2 minutes</em> like a soldier</span></div>
+                        <span class="hook-id" aria-hidden="true">C06</span>
+                        <figcaption class="hook-caption"><strong>Sleep</strong><span>Cinematic</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Sleep hook, Cinematic" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="real">
+                        <img class="hook-poster" src="assets/hooks/H01.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/H01.mp4" muted loop playsinline preload="none" aria-label="Sleep hook, Night-cam footage"></video>
+                        <div class="hook-overlay ts-dark" aria-hidden="true"><span class="hook-headline">Waking up at <em>3 A.M.</em> every night?</span></div>
+                        <span class="hook-id" aria-hidden="true">H01</span>
+                        <figcaption class="hook-caption"><strong>Sleep</strong><span>Night-cam footage</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Sleep hook, Night-cam footage" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="real">
+                        <img class="hook-poster" src="assets/hooks/P04.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/P04.mp4" muted loop playsinline preload="none" aria-label="Nerve pain hook, POV homemade"></video>
+                        <div class="hook-overlay ts-dark" aria-hidden="true"><span class="hook-headline">Ever Googled this at <em>2 A.M.</em>?</span></div>
+                        <span class="hook-id" aria-hidden="true">P04</span>
+                        <figcaption class="hook-caption"><strong>Nerve pain</strong><span>POV homemade</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Nerve pain hook, POV homemade" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="anim">
+                        <img class="hook-poster" src="assets/hooks/C03.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/C03.mp4" muted loop playsinline preload="none" aria-label="Kidney health hook, Pixar 3D"></video>
+                        <div class="hook-overlay ts-comic" aria-hidden="true"><span class="hook-headline">The kitchen herb your <em>kidneys</em> need</span></div>
+                        <span class="hook-id" aria-hidden="true">C03</span>
+                        <figcaption class="hook-caption"><strong>Kidney health</strong><span>Pixar 3D</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Kidney health hook, Pixar 3D" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="med">
+                        <img class="hook-poster" src="assets/hooks/C10.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/C10.mp4" muted loop playsinline preload="none" aria-label="Swollen legs hook, 3D cutaway"></video>
+                        <div class="hook-overlay ts-marker" aria-hidden="true"><span class="hook-headline">The <em>30-second</em> swollen legs trick</span></div>
+                        <span class="hook-id" aria-hidden="true">C10</span>
+                        <figcaption class="hook-caption"><strong>Swollen legs</strong><span>3D cutaway</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Swollen legs hook, 3D cutaway" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="med">
+                        <img class="hook-poster" src="assets/hooks/C05.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/C05.mp4" muted loop playsinline preload="none" aria-label="Nerve pain hook, 3D medical"></video>
+                        <div class="hook-overlay ts-neon" aria-hidden="true"><span class="hook-headline">Nature's <em>nerve soother</em></span></div>
+                        <span class="hook-id" aria-hidden="true">C05</span>
+                        <figcaption class="hook-caption"><strong>Nerve pain</strong><span>3D medical</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Nerve pain hook, 3D medical" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="real">
+                        <img class="hook-poster" src="assets/hooks/C08.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/C08.mp4" muted loop playsinline preload="none" aria-label="Knee pain hook, Nurse selfie"></video>
+                        <div class="hook-overlay ts-dark" aria-hidden="true"><span class="hook-headline">What nurses wish you knew about <em>knee pain</em></span></div>
+                        <span class="hook-id" aria-hidden="true">C08</span>
+                        <figcaption class="hook-caption"><strong>Knee pain</strong><span>Nurse selfie</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Knee pain hook, Nurse selfie" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    <figure class="hook-card" data-g="real">
+                        <img class="hook-poster" src="assets/hooks/P05.jpg" alt="" loading="lazy" decoding="async" width="270" height="480">
+                        <video class="hook-video" data-src="assets/hooks/P05.mp4" muted loop playsinline preload="none" aria-label="Supplements hook, POV homemade"></video>
+                        <div class="hook-overlay ts-stroke" aria-hidden="true"><span class="hook-headline">Throw out <em>all those pills</em></span></div>
+                        <span class="hook-id" aria-hidden="true">P05</span>
+                        <figcaption class="hook-caption"><strong>Supplements</strong><span>POV homemade</span></figcaption>
+                        <button class="hook-play-toggle" type="button" aria-label="Play Supplements hook, POV homemade" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+                        <span class="hook-error" role="status" hidden>Preview unavailable</span>
+                    </figure>
+                    </div>
+                </div>
+                <div class="hook-controls">
+                    <span class="hook-position" id="hookPosition" aria-live="polite">1–4 of 32 hooks</span>
+                    <div class="hook-navigation">
+                        <button type="button" class="hook-prev" aria-controls="hookGrid" aria-label="Previous hook">&#8592;</button>
+                        <button type="button" class="hook-next" aria-controls="hookGrid" aria-label="Next hook">&#8594;</button>
+                    </div>
+                </div>
+                <p class="hook-footnote">Need hooks like these for your next campaign? <a href="#contact">Let's collaborate</a> on your creative.</p>
+            </div>
+        </section>
+
         <section class="work" id="work" aria-labelledby="work-heading">
             <div class="container">
+        
                 <header class="section-header">
-                    <h2 id="work-heading" class="section-title">Selected Work</h2>
+                    <h2 id="work-heading" class="section-title">
+                        Selected Work
+                    </h2>
                 </header>
+        
                 <div class="video-grid" id="videoGrid">
+        
                     <!-- Video 1: Flexora -->
                     <article class="video-card">
                         <div class="video-container">
                             <video
                                 class="video-player"
                                 controls
-                                preload="metadata"
+                                preload="none"
+                                poster="assets/thumbnails/flexora.jpg"
                                 playsinline
-                                webkit-playsinline>
-                                <source src="assets/Flexora_v5_watermark.mp4" type="video/mp4">
+                                webkit-playsinline
+                                aria-label="Flexora AI Product Showcase">
+        
+                                <source
+                                    src="assets/optimized/Flexora_v5_watermark_optimized.mp4"
+                                    type="video/mp4">
+        
                                 Your browser does not support the video tag.
                             </video>
-                            <!-- <div class="video-overlay">
-                                <div class="video-title">Flexora — AI Product Showcase</div>
-                                <p class="video-meta">Runway Gen-3 • Luma Dream Machine • ComfyUI</p>
-                            </div> -->
                         </div>
                     </article>
-
+        
                     <!-- Video 2: Velare -->
                     <article class="video-card">
                         <div class="video-container">
                             <video
                                 class="video-player"
                                 controls
-                                preload="metadata"
+                                preload="none"
+                                poster="assets/thumbnails/velare.jpg"
                                 playsinline
-                                webkit-playsinline>
-                                <source src="assets/Velare_Pixar_H3_final.mp4" type="video/mp4">
+                                webkit-playsinline
+                                aria-label="Velare AI Animation">
+        
+                                <source
+                                    src="assets/optimized/Velare_Pixar_H3_final_optimized.mp4"
+                                    type="video/mp4">
+        
                                 Your browser does not support the video tag.
                             </video>
-                            <!-- <div class="video-overlay">
-                                <div class="video-title">Velare — Pixar-Style AI Animation</div>
-                                <p class="video-meta">Runway Gen-3 • Luma Dream Machine • Pixar Style</p>
-                            </div> -->
                         </div>
                     </article>
-
-                    <!-- Video 3: Placeholder for third video -->
+        
+                    <!-- Video 3: Flexora Placeholder -->
                     <article class="video-card">
                         <div class="video-container">
                             <video
                                 class="video-player"
                                 controls
-                                preload="metadata"
+                                preload="none"
+                                poster="assets/thumbnails/flexora.jpg"
                                 playsinline
-                                webkit-playsinline>
-                                <source src="assets/Flexora_v5_watermark.mp4" type="video/mp4">
+                                webkit-playsinline
+                                aria-label="Flexora AI Product Showcase Alternative">
+        
+                                <source
+                                    src="assets/optimized/Flexora_v5_watermark_optimized.mp4"
+                                    type="video/mp4">
+        
                                 Your browser does not support the video tag.
                             </video>
-                            <!-- <div class="video-overlay">
-                                <div class="video-title">Flexora — AI Product Showcase (Alt)</div>
-                                <p class="video-meta">Runway Gen-3 • Luma Dream Machine • ComfyUI</p>
-                            </div> -->
                         </div>
                     </article>
+        
                 </div>
             </div>
         </section>
@@ -358,6 +693,7 @@
                 </div>
                 <nav class="footer-nav" aria-label="Footer navigation">
                     <a href="#work">Work</a>
+                    <a href="#hooks">Hook Lab</a>
                     <a href="#services">Services</a>
                     <a href="#about">About</a>
                     <a href="#contact">Contact</a>
@@ -378,7 +714,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Karl. Built with AI-assisted workflows. Always learning.</p>
+                <p>&copy; 2026 Karl Ghian Mercado</p>
             </div>
         </div>
     </footer>

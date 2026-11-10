@@ -184,6 +184,8 @@ function closeMobileMenu() {
 // Render Work Grid
 // ===================================
 function renderWorkGrid() {
+    // Existing site uses a static #videoGrid, not the old dynamic #workGrid.
+    if (!workGrid) return;
     workGrid.innerHTML = portfolioData.map((project, index) => `
         <article class="work-card animate-in animate-delay-${Math.min(index + 1, 6)}" data-project-id="${project.id}" tabindex="0" role="listitem" aria-label="View ${project.title}">
             <div class="work-card-thumb">
@@ -430,6 +432,7 @@ function init() {
     initKeyboardNav();
     initHeroSpotlight();
     observeAnimations();
+    initHookLab();
 
     // Event listeners
     if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
@@ -454,4 +457,203 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
 } else {
     init();
+}
+
+// ===================================
+// Hook Lab — horizontal looping video carousel
+// ===================================
+function initHookLab() {
+    const section = document.getElementById('hooks');
+    const rail = document.getElementById('hookGrid');
+    if (!section || !rail) return;
+
+    const cards = Array.from(rail.querySelectorAll('.hook-card'));
+    const filters = Array.from(section.querySelectorAll('.hook-filter'));
+    const prev = section.querySelector('.hook-prev');
+    const next = section.querySelector('.hook-next');
+    const position = document.getElementById('hookPosition');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const pausedByUser = new Set();
+    const requestedByUser = new Set();
+    let railInViewport = false;
+    let framePending = false;
+
+    const shownCards = () => cards.filter(card => !card.hidden);
+    const isVisibleInRail = (card) => {
+        const box = card.getBoundingClientRect();
+        const clip = rail.getBoundingClientRect();
+        const overlap = Math.max(0, Math.min(box.right, clip.right) - Math.max(box.left, clip.left));
+        return overlap / Math.max(box.width, 1) >= 0.6;
+    };
+
+    function updatePlayButton(card) {
+        const video = card.querySelector('video');
+        const button = card.querySelector('.hook-play-toggle');
+        if (!video || !button) return;
+        const playing = !video.paused && !video.ended;
+        button.querySelector('span').textContent = playing ? '❚❚' : '▶';
+        button.setAttribute('aria-label', `${playing ? 'Pause' : 'Play'} ${video.getAttribute('aria-label')}`);
+        button.setAttribute('aria-pressed', String(playing));
+        card.classList.toggle('is-playing', playing);
+    }
+
+    function startVideo(card) {
+        const video = card.querySelector('video');
+        if (!video || card.classList.contains('video-unavailable')) return;
+
+        // Assign the source once: off-screen cards never request their MP4.
+        if (!video.hasAttribute('src')) {
+            video.src = video.dataset.src;
+        }
+        if (video.paused && !video.dataset.playPending) {
+            video.dataset.playPending = 'true';
+            const playRequest = video.play();
+            if (playRequest && typeof playRequest.then === 'function') {
+                playRequest.then(() => {
+                    delete video.dataset.playPending;
+                    updatePlayButton(card);
+                    scheduleSync();
+                }).catch(() => {
+                    delete video.dataset.playPending;
+                    updatePlayButton(card);
+                });
+            } else {
+                delete video.dataset.playPending;
+            }
+        }
+    }
+
+    function syncPlayback() {
+        framePending = false;
+        const pageActive = railInViewport && !document.hidden;
+
+        cards.forEach(card => {
+            const video = card.querySelector('video');
+            if (!video) return;
+            const eligible = pageActive && !card.hidden && isVisibleInRail(card);
+            const permitted = (requestedByUser.has(card) || !reducedMotion.matches) && !pausedByUser.has(card);
+
+            if (eligible && permitted) {
+                startVideo(card);
+            } else if (!video.paused) {
+                video.pause();
+            }
+        });
+        updateControls();
+    }
+
+    function scheduleSync() {
+        if (framePending) return;
+        framePending = true;
+        requestAnimationFrame(syncPlayback);
+    }
+
+    function updateControls() {
+        const visible = shownCards();
+        const maxScroll = Math.max(0, rail.scrollWidth - rail.clientWidth);
+        if (prev) prev.disabled = rail.scrollLeft < 3;
+        if (next) next.disabled = rail.scrollLeft >= maxScroll - 3;
+        if (!position) return;
+        if (!visible.length) {
+            position.textContent = 'No hooks in this category';
+            return;
+        }
+        const railBox = rail.getBoundingClientRect();
+        const indices = visible.map((card, i) => {
+            const box = card.getBoundingClientRect();
+            const overlap = Math.max(0, Math.min(box.right, railBox.right) - Math.max(box.left, railBox.left));
+            return overlap / Math.max(box.width, 1) >= 0.5 ? i : -1;
+        }).filter(index => index >= 0);
+        const first = indices.length ? indices[0] + 1 : 1;
+        const last = indices.length ? indices[indices.length - 1] + 1 : first;
+        position.textContent = `${first}–${last} of ${visible.length} hooks`;
+    }
+
+    function advance(direction) {
+        const visible = shownCards();
+        if (!visible.length) return;
+        const firstIndex = visible.findIndex(card => isVisibleInRail(card));
+        const current = Math.max(0, firstIndex);
+        const target = visible[Math.max(0, Math.min(visible.length - 1, current + direction))];
+        if (!target) return;
+        const origin = visible[0].offsetLeft;
+        rail.scrollTo({
+            left: target.offsetLeft - origin,
+            behavior: reducedMotion.matches ? 'instant' : 'smooth'
+        });
+    }
+
+    // Derive counts from the actual DOM rather than hard-coding them.
+    filters.forEach(filter => {
+        const category = filter.dataset.g;
+        const count = category === 'all' ? cards.length : cards.filter(card => card.dataset.g === category).length;
+        const badge = filter.querySelector('[data-count]');
+        if (badge) badge.textContent = String(count);
+        filter.addEventListener('click', () => {
+            filters.forEach(button => button.setAttribute('aria-pressed', String(button === filter)));
+            cards.forEach(card => {
+                card.hidden = category !== 'all' && card.dataset.g !== category;
+                if (card.hidden) {
+                    card.querySelector('video')?.pause();
+                    card.classList.remove('is-playing');
+                }
+            });
+            rail.scrollLeft = 0;
+            scheduleSync();
+        });
+    });
+
+    cards.forEach(card => {
+        const video = card.querySelector('video');
+        const img = card.querySelector('.hook-poster');
+        const button = card.querySelector('.hook-play-toggle');
+        if (!video) return;
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+        video.preload = 'none';
+        img?.addEventListener('error', () => card.classList.add('poster-missing'));
+        video.addEventListener('playing', () => updatePlayButton(card));
+        video.addEventListener('pause', () => updatePlayButton(card));
+        video.addEventListener('error', () => {
+            card.classList.add('video-unavailable');
+            const errorText = card.querySelector('.hook-error');
+            if (errorText) errorText.hidden = false;
+            updatePlayButton(card);
+        });
+        button?.addEventListener('click', () => {
+            if (!video.paused) {
+                pausedByUser.add(card);
+                requestedByUser.delete(card);
+                video.pause();
+            } else {
+                pausedByUser.delete(card);
+                requestedByUser.add(card);
+                startVideo(card);
+            }
+            updatePlayButton(card);
+        });
+    });
+
+    const railObserver = new IntersectionObserver(entries => {
+        railInViewport = entries[0]?.isIntersecting ?? false;
+        scheduleSync();
+    }, { threshold: 0.1 });
+    railObserver.observe(rail);
+
+    rail.addEventListener('scroll', scheduleSync, { passive: true });
+    window.addEventListener('resize', scheduleSync);
+    document.addEventListener('visibilitychange', scheduleSync);
+    reducedMotion.addEventListener?.('change', scheduleSync);
+    prev?.addEventListener('click', () => advance(-1));
+    next?.addEventListener('click', () => advance(1));
+    rail.addEventListener('keydown', event => {
+        if (event.target !== rail) return; // Allow controls inside the cards.
+        if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+            event.preventDefault();
+            advance(event.key === 'ArrowRight' ? 1 : -1);
+        }
+    });
+
+    updateControls();
 }

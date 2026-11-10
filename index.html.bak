@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Karl - AI Video Editor & Generator. Specializing in AI-powered video creation, editing, and generative video workflows.">
+    <title>Karl | AI Video Editor & Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo" aria-label="Karl - Home">
+                <span class="logo-text">Karl Ghian Mercado</span>
+            </a>
+            <div class="nav-actions">
+                <div class="nav-links">
+                    <a href="#work" class="nav-link">Work</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link nav-link--contact">Contact</a>
+                </div>
+                <!-- <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" aria-pressed="true">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button> -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+            <a href="#work" class="mobile-nav-link">Work</a>
+            <a href="#services" class="mobile-nav-link">Services</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="container">
+                <div class="hero-inner">
+                    <!-- ROW 1: Profile Identity -->
+                    <div class="hero-profile animate-hero animate-delay-1">
+                        <div class="profile-photo">
+                            <img src="assets/Profile1.png.bak" alt="Karl Ghian Mercado — AI Direct Response Video Editor / Director" class="profile-image" id="profileImage" onerror="this.src='assets/profile-placeholder.svg'">
+                        </div>
+                        <div class="profile-identity">
+                            <h1 class="hero-name">
+                                <span class="name-first">KARL</span>
+                                <span class="name-highlight">GHIAN MERCADO</span>
+                                <span class="flag philippines" aria-label="Philippines" role="img">
+                                    <img src="assets/flag-philippines.svg" alt="" loading="lazy" width="40" height="35">
+                                </span>
+                            </h1>
+                            <p class="hero-title">AI Direct Response Video Editor / Director</p>
+                        </div>
+                    </div>
+
+                    <!-- ROW 2: Main Headline -->
+                    <h1 class="hero-headline">
+                        <span class="hero-line hero-line-1">
+                            <span class="hero-word hero-word-1 animate-word animate-delay-1">Stop the</span>
+                            <span class="hero-word hero-word-2 hero-gradient hero-gradient-scroll animate-word animate-delay-2">Scroll.</span>
+                        </span>
+                        <span class="hero-line hero-line-2">
+                            <span class="hero-word hero-word-3 animate-word animate-delay-3">Start the</span>
+                            <span class="hero-word hero-word-4 hero-gradient hero-gradient-story animate-word animate-delay-4">Story.</span>
+                        </span>
+                    </h1>
+
+                    <!-- ROW 3: Hook Quote -->
+                    <blockquote class="hero-quote animate-hero animate-delay-3">
+                        <span class="quote-accent"></span>
+                        The first <span class="quote-highlight">3 seconds</span> capture attention. The next ones make it <span class="quote-highlight-white">worth watching</span>.
+                    </blockquote>
+
+                    <!-- ROW 4: Introduction -->
+                    <p class="hero-intro animate-hero animate-delay-4">
+                        I turn creative ideas into <span class="intro-highlight">AI-powered videos</span> through compelling hooks, cinematic visuals, and smart editing. From generative storytelling to polished short-form content, I focus on making every second count.
+                    </p>
+
+                    <!-- ROW 5: Specialty Badges -->
+                    <div class="hero-skills animate-hero animate-delay-5" aria-label="Skills and specialties">
+                        <span class="skill-badge">
+                            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                            <span>AI Video Generation</span>
+                        </span>
+                        <span class="skill-badge">
+                            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>
+                            <span>Hook-First Editing</span>
+                        </span>
+                        <span class="skill-badge">
+                            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                            <span>Visual Storytelling</span>
+                        </span>
+                        <span class="skill-badge">
+                            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                            <span>ComfyUI Workflows</span>
+                        </span>
+                    </div>
+
+                    <!-- ROW 6: Call-to-Action -->
+                    <div class="hero-cta animate-hero animate-delay-6">
+                        <a href="#work" class="btn btn-primary">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            <span>Watch My Hooks</span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">Let's Collaborate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll-hint" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+        </section>
+
+
+        <section class="work" id="work" aria-labelledby="work-heading">
+            <div class="container">
+        
+                <header class="section-header">
+                    <h2 id="work-heading" class="section-title">
+                        Selected Work
+                    </h2>
+                </header>
+        
+                <div class="video-grid" id="videoGrid">
+        
+                    <!-- Video 1: Flexora -->
+                    <article class="video-card">
+                        <div class="video-container">
+                            <video
+                                class="video-player"
+                                controls
+                                preload="none"
+                                poster="assets/thumbnails/flexora.jpg"
+                                playsinline
+                                webkit-playsinline
+                                aria-label="Flexora AI Product Showcase">
+        
+                                <source
+                                    src="assets/optimized/Flexora_v5_watermark_optimized.mp4"
+                                    type="video/mp4">
+        
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </article>
+        
+                    <!-- Video 2: Velare -->
+                    <article class="video-card">
+                        <div class="video-container">
+                            <video
+                                class="video-player"
+                                controls
+                                preload="none"
+                                poster="assets/thumbnails/velare.jpg"
+                                playsinline
+                                webkit-playsinline
+                                aria-label="Velare AI Animation">
+        
+                                <source
+                                    src="assets/optimized/Velare_Pixar_H3_final_optimized.mp4"
+                                    type="video/mp4">
+        
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </article>
+        
+                    <!-- Video 3: Flexora Placeholder -->
+                    <article class="video-card">
+                        <div class="video-container">
+                            <video
+                                class="video-player"
+                                controls
+                                preload="none"
+                                poster="assets/thumbnails/flexora.jpg"
+                                playsinline
+                                webkit-playsinline
+                                aria-label="Flexora AI Product Showcase Alternative">
+        
+                                <source
+                                    src="assets/optimized/Flexora_v5_watermark_optimized.mp4"
+                                    type="video/mp4">
+        
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </article>
+        
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="services" id="services" aria-labelledby="services-heading">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="services-heading" class="section-title">What I Do</h2>
+                    <p class="section-subtitle">AI-powered video services for modern creators and brands</p>
+                </header>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                                <circle cx="12" cy="13" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">AI Video Generation</h3>
+                        <p class="service-desc">Creating original video content using Runway Gen-3, Kling, Luma Dream Machine, Sora, and Veo. From concept to final render.</p>
+                        <ul class="service-tools">
+                            <li>Runway Gen-3</li>
+                            <li>Kling AI</li>
+                            <li>Luma Dream Machine</li>
+                            <li>Sora / Veo</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M8 21h8"></path>
+                                <path d="M12 17v4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Video Editing & Post-Production</h3>
+                        <p class="service-desc">Professional editing, color grading, motion graphics, sound design, and VFX integration using industry-standard tools.</p>
+                        <ul class="service-tools">
+                            <li>DaVinci Resolve</li>
+                            <li>Premiere Pro</li>
+                            <li>After Effects</li>
+                            <li>Topaz Video AI</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">AI Avatar & Talking Head</h3>
+                        <p class="service-desc">Realistic AI avatars, lip-sync, and talking head videos for training, marketing, and personalized content at scale.</p>
+                        <ul class="service-tools">
+                            <li>HeyGen</li>
+                            <li>Synthesia</li>
+                            <li>D-ID</li>
+                            <li>ElevenLabs</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Custom AI Workflows</h3>
+                        <p class="service-desc">Building automated video pipelines with ComfyUI, custom LoRAs, ControlNet, and API integrations for scalable production.</p>
+                        <ul class="service-tools">
+                            <li>ComfyUI</li>
+                            <li>Custom LoRAs</li>
+                            <li>ControlNet</li>
+                            <li>Python/API</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about" aria-labelledby="about-heading">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 id="about-heading" class="section-title">About Me</h2>
+                        <p class="about-lead">I'm Karl — an AI video editor and generator exploring the frontier of generative video.</p>
+                        <p>
+                            My journey started with traditional video editing, but when generative AI video emerged, I dove in headfirst.
+                            I'm early in my career, but I move fast — constantly experimenting with new models, building custom ComfyUI workflows,
+                            and staying current with the rapid evolution of AI video tools.
+                        </p>
+                        <p>
+                            What drives me: <strong>curiosity</strong>. Every new model release (Runway Gen-3, Kling, Sora, Veo) is an opportunity
+                            to learn, test, and integrate. I'm not just using tools — I'm understanding how they work, where they excel,
+                            and how to combine them for real client results.
+                        </p>
+                        <p>
+                            Based in <strong>San Francisco</strong>, working globally. Always open to collaborating with creators,
+                            agencies, and brands pushing the boundaries of AI video.
+                        </p>
+
+                        <div class="learning-section">
+                            <h3 class="learning-title">Currently Exploring</h3>
+                            <ul class="learning-list">
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M12 6v6l4 2"></path>
+                                    </svg>
+                                    <span>Sora + ComfyUI hybrid workflows</span>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M12 6v6l4 2"></path>
+                                    </svg>
+                                    <span>Real-time video-to-video translation</span>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M12 6v6l4 2"></path>
+                                    </svg>
+                                    <span>Consistent character LoRA training</span>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M12 6v6l4 2"></path>
+                                    </svg>
+                                    <span>AI-driven A/B testing frameworks</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" id="contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="contact-heading">Let's Create Something</h2>
+                    <p>Whether you have a clear brief or just an idea, I'd love to hear about your project.</p>
+                    <div class="cta-buttons">
+                        <a href="mailto:kgcm28@gmail.com" class="btn btn-primary">Start a Project</a>
+                        <a href="https://calendly.com/karl-aivideo/30min" class="btn btn-secondary" target="_blank" rel="noopener">Book a Call</a>
+                    </div>
+                    <p class="cta-note">Or email directly: <a href="mailto:kgcm28@gmail.com">kgcm28@gmail.com</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">Karl</span>
+                    <p>AI Video Editor & Generator</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="#work">Work</a>
+                    <a href="#services">Services</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <div class="footer-social">
+                    <a href="https://twitter.com/karl_aivideo" class="social-link" target="_blank" rel="noopener" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/karl-aivideo" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://instagram.com/karl_aivideo" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="https://youtube.com/@karl_aivideo" class="social-link" target="_blank" rel="noopener" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 4.5a2.5 2.5 0 0 0-5 0v15a2.5 2.5 0 0 0 5 0v-15zM9 14l7-5-7-5v10z"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Karl Ghian Mercado</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
