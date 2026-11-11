@@ -18,8 +18,8 @@
             </a>
             <div class="nav-actions">
                 <div class="nav-links">
-                    <a href="#work" class="nav-link">Work</a>
                     <a href="#hooks" class="nav-link">Hook Lab</a>
+                    <a href="#work" class="nav-link">Work</a>
                     <a href="#services" class="nav-link">Services</a>
                     <a href="#about" class="nav-link">About</a>
                     <a href="#contact" class="nav-link nav-link--contact">Contact</a>
@@ -46,7 +46,7 @@
         </nav>
         <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
             <a href="#hooks" class="mobile-nav-link">Hook Lab</a>
-            <a href="#work" class="mobile-nav-link">Work</a>            
+            <a href="#work" class="mobile-nav-link">Work</a>
             <a href="#services" class="mobile-nav-link">Services</a>
             <a href="#about" class="mobile-nav-link">About</a>
             <a href="#contact" class="mobile-nav-link">Contact</a>
@@ -54,86 +54,89 @@
     </header>
 
     <main>
-        
-
-
-        <section class="work" id="work" aria-labelledby="work-heading">
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
             <div class="container">
-        
-                <header class="section-header">
-                    <h2 id="work-heading" class="section-title">
-                        Selected Work
-                    </h2>
-                </header>
-        
-                <div class="video-grid" id="videoGrid">
-        
-                    <!-- Video 1: Flexora -->
-                    <article class="video-card">
-                        <div class="video-container">
-                            <video
-                                class="video-player"
-                                controls
-                                preload="none"
-                                poster="assets/thumbnails/flexora.jpg"
-                                playsinline
-                                webkit-playsinline
-                                aria-label="Flexora AI Product Showcase">
-        
-                                <source
-                                    src="assets/optimized/Flexora_v5_watermark_optimized.mp4"
-                                    type="video/mp4">
-        
-                                Your browser does not support the video tag.
-                            </video>
+                <div class="hero-inner">
+                    <!-- ROW 1: Profile Identity -->
+                    <div class="hero-profile animate-hero animate-delay-1">
+                        <div class="profile-photo">
+                            <img src="assets/Profile1.png.bak" alt="Karl Ghian Mercado — AI Direct Response Video Editor / Director" class="profile-image" id="profileImage" onerror="this.src='assets/profile-placeholder.svg'">
                         </div>
-                    </article>
-        
-                    <!-- Video 2: Velare -->
-                    <article class="video-card">
-                        <div class="video-container">
-                            <video
-                                class="video-player"
-                                controls
-                                preload="none"
-                                poster="assets/thumbnails/velare.jpg"
-                                playsinline
-                                webkit-playsinline
-                                aria-label="Velare AI Animation">
-        
-                                <source
-                                    src="assets/optimized/Velare_Pixar_H3_final_optimized.mp4"
-                                    type="video/mp4">
-        
-                                Your browser does not support the video tag.
-                            </video>
+                        <div class="profile-identity">
+                            <h1 class="hero-name">
+                                <span class="name-first">KARL</span>
+                                <span class="name-highlight">GHIAN MERCADO</span>
+                                <span class="flag philippines" aria-label="Philippines" role="img">
+                                    <img src="assets/flag-philippines.svg" alt="" loading="lazy" width="40" height="35">
+                                </span>
+                            </h1>
+                            <p class="hero-title">AI Direct Response Video Editor / Director</p>
                         </div>
-                    </article>
-        
-                    <!-- Video 3: Flexora Placeholder -->
-                    <article class="video-card">
-                        <div class="video-container">
-                            <video
-                                class="video-player"
-                                controls
-                                preload="none"
-                                poster="assets/thumbnails/flexora.jpg"
-                                playsinline
-                                webkit-playsinline
-                                aria-label="Flexora AI Product Showcase Alternative">
-        
-                                <source
-                                    src="assets/optimized/Flexora_v5_watermark_optimized.mp4"
-                                    type="video/mp4">
-        
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </article>
-        
+                    </div>
+
+                    <!-- ROW 2: Main Headline -->
+                    <h1 class="hero-headline">
+                        <span class="hero-line hero-line-1">
+                            <span class="hero-word hero-word-1 animate-word animate-delay-1">Stop the</span>
+                            <span class="hero-word hero-word-2 hero-gradient hero-gradient-scroll animate-word animate-delay-2">Scroll.</span>
+                        </span>
+                        <span class="hero-line hero-line-2">
+                            <span class="hero-word hero-word-3 animate-word animate-delay-3">Start the</span>
+                            <span class="hero-word hero-word-4 hero-gradient hero-gradient-story animate-word animate-delay-4">Story.</span>
+                        </span>
+                    </h1>
+
+                    <!-- ROW 3: Hook Quote -->
+                    <blockquote class="hero-quote animate-hero animate-delay-3">
+                        <span class="quote-accent"></span>
+                        The first <span class="quote-highlight">3 seconds</span> capture attention. The next ones make it <span class="quote-highlight-white">worth watching</span>.
+                    </blockquote>
+
+                    <!-- ROW 4: Introduction -->
+                    <p class="hero-intro animate-hero animate-delay-4">
+                        I turn creative ideas into <span class="intro-highlight">AI-powered videos</span> through compelling hooks, cinematic visuals, and smart editing. From generative storytelling to polished short-form content, I focus on making every second count.
+                    </p>
+
+                    <!-- ROW 5: Specialty Badges -->
+                    <div class="hero-skills animate-hero animate-delay-5" aria-label="Skills and specialties">
+                        <span class="skill-badge">
+                            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                            <span>AI Video Generation</span>
+                        </span>
+                        <span class="skill-badge">
+                            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>
+                            <span>Hook-First Editing</span>
+                        </span>
+                        <span class="skill-badge">
+                            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                            <span>Visual Storytelling</span>
+                        </span>
+                        <span class="skill-badge">
+                            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                            <span>ComfyUI Workflows</span>
+                        </span>
+                    </div>
+
+                    <!-- ROW 6: Call-to-Action -->
+                    <div class="hero-cta animate-hero animate-delay-6">
+                        <a href="#hooks" class="btn btn-primary">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            <span>Watch My Hooks</span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">Let's Collaborate</a>
+                    </div>
                 </div>
             </div>
+            <div class="hero-scroll-hint" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
         </section>
+
+
+
         
 
         <!-- Hook Lab: 32 short-form video hooks -->
@@ -452,88 +455,83 @@
                 <p class="hook-footnote">Need hooks like these for your next campaign? <a href="#contact">Let's collaborate</a> on your creative.</p>
             </div>
         </section>
-
-        <section class="hero" id="home">
-            <div class="hero-bg"></div>
+        <section class="work" id="work" aria-labelledby="work-heading">
             <div class="container">
-                <div class="hero-inner">
-                    <!-- ROW 1: Profile Identity -->
-                    <div class="hero-profile animate-hero animate-delay-1">
-                        <div class="profile-photo">
-                            <img src="assets/Profile1.png.bak" alt="Karl Ghian Mercado — AI Direct Response Video Editor / Director" class="profile-image" id="profileImage" onerror="this.src='assets/profile-placeholder.svg'">
+        
+                <header class="section-header">
+                    <h2 id="work-heading" class="section-title">
+                        Selected Work
+                    </h2>
+                </header>
+        
+                <div class="video-grid" id="videoGrid">
+        
+                    <!-- Video 1: Flexora -->
+                    <article class="video-card">
+                        <div class="video-container">
+                            <video
+                                class="video-player"
+                                controls
+                                preload="none"
+                                poster="assets/thumbnails/flexora.jpg"
+                                playsinline
+                                webkit-playsinline
+                                aria-label="Flexora AI Product Showcase">
+        
+                                <source
+                                    src="assets/optimized/Flexora_v5_watermark_optimized.mp4"
+                                    type="video/mp4">
+        
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
-                        <div class="profile-identity">
-                            <h1 class="hero-name">
-                                <span class="name-first">KARL</span>
-                                <span class="name-highlight">GHIAN MERCADO</span>
-                                <span class="flag philippines" aria-label="Philippines" role="img">
-                                    <img src="assets/flag-philippines.svg" alt="" loading="lazy" width="40" height="35">
-                                </span>
-                            </h1>
-                            <p class="hero-title">AI Direct Response Video Editor / Director</p>
+                    </article>
+        
+                    <!-- Video 2: Velare -->
+                    <article class="video-card">
+                        <div class="video-container">
+                            <video
+                                class="video-player"
+                                controls
+                                preload="none"
+                                poster="assets/thumbnails/velare.jpg"
+                                playsinline
+                                webkit-playsinline
+                                aria-label="Velare AI Animation">
+        
+                                <source
+                                    src="assets/optimized/Velare_Pixar_H3_final_optimized.mp4"
+                                    type="video/mp4">
+        
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
-                    </div>
-
-                    <!-- ROW 2: Main Headline -->
-                    <h1 class="hero-headline">
-                        <span class="hero-line hero-line-1">
-                            <span class="hero-word hero-word-1 animate-word animate-delay-1">Stop the</span>
-                            <span class="hero-word hero-word-2 hero-gradient hero-gradient-scroll animate-word animate-delay-2">Scroll.</span>
-                        </span>
-                        <span class="hero-line hero-line-2">
-                            <span class="hero-word hero-word-3 animate-word animate-delay-3">Start the</span>
-                            <span class="hero-word hero-word-4 hero-gradient hero-gradient-story animate-word animate-delay-4">Story.</span>
-                        </span>
-                    </h1>
-
-                    <!-- ROW 3: Hook Quote -->
-                    <blockquote class="hero-quote animate-hero animate-delay-3">
-                        <span class="quote-accent"></span>
-                        The first <span class="quote-highlight">3 seconds</span> capture attention. The next ones make it <span class="quote-highlight-white">worth watching</span>.
-                    </blockquote>
-
-                    <!-- ROW 4: Introduction -->
-                    <p class="hero-intro animate-hero animate-delay-4">
-                        I turn creative ideas into <span class="intro-highlight">AI-powered videos</span> through compelling hooks, cinematic visuals, and smart editing. From generative storytelling to polished short-form content, I focus on making every second count.
-                    </p>
-
-                    <!-- ROW 5: Specialty Badges -->
-                    <div class="hero-skills animate-hero animate-delay-5" aria-label="Skills and specialties">
-                        <span class="skill-badge">
-                            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-                            <span>AI Video Generation</span>
-                        </span>
-                        <span class="skill-badge">
-                            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>
-                            <span>Hook-First Editing</span>
-                        </span>
-                        <span class="skill-badge">
-                            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-                            <span>Visual Storytelling</span>
-                        </span>
-                        <span class="skill-badge">
-                            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-                            <span>ComfyUI Workflows</span>
-                        </span>
-                    </div>
-
-                    <!-- ROW 6: Call-to-Action -->
-                    <div class="hero-cta animate-hero animate-delay-6">
-                        <a href="#hooks" class="btn btn-primary">
-                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                            <span>Watch My Hooks</span>
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">Let's Collaborate</a>
-                    </div>
+                    </article>
+        
+                    <!-- Video 3: Flexora Placeholder -->
+                    <article class="video-card">
+                        <div class="video-container">
+                            <video
+                                class="video-player"
+                                controls
+                                preload="none"
+                                poster="assets/thumbnails/flexora.jpg"
+                                playsinline
+                                webkit-playsinline
+                                aria-label="Flexora AI Product Showcase Alternative">
+        
+                                <source
+                                    src="assets/optimized/Flexora_v5_watermark_optimized.mp4"
+                                    type="video/mp4">
+        
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </article>
+        
                 </div>
             </div>
-            <div class="hero-scroll-hint" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-            </div>
         </section>
-
         <section class="services" id="services" aria-labelledby="services-heading">
             <div class="container">
                 <header class="section-header">
