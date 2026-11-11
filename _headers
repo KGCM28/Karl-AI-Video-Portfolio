@@ -1,33 +1,16 @@
-# Cloudflare Pages Headers
-# Cache static assets aggressively
-/assets/*
-  Cache-Control: public, max-age=31536000, immutable
-
-/css/*
-  Cache-Control: public, max-age=31536000, immutable
-
-/js/*
-  Cache-Control: public, max-age=31536000, immutable
-
-/assets/thumbnails/*
-  Cache-Control: public, max-age=31536000, immutable
-
-# Video files - shorter cache since they're large
-/assets/*.mp4
-  Cache-Control: public, max-age=86400
-
-# HTML - no cache for freshness
+# Do not cache CSS/JS immutably while URLs remain stable.
+/
+  Cache-Control: public, max-age=0, must-revalidate
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
-
-# Security headers
+/css/*
+  Cache-Control: public, max-age=0, must-revalidate
+/js/*
+  Cache-Control: public, max-age=0, must-revalidate
+/assets/*
+  Cache-Control: public, max-age=3600
 /*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-
-# CORS for fonts
-/fonts/*
-  Access-Control-Allow-Origin: *
-  Cache-Control: public, max-age=31536000, immutable
