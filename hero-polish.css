@@ -1,0 +1,96 @@
+/* === KGM HERO POLISH START === */
+/* Append this after the existing Hero section rules. This update only targets the hero. */
+
+/* Align the hero with Hook Lab / Selected Work, without losing its mobile gutter. */
+.hero .container {
+    max-width: 1180px;
+}
+
+/* Atmospheric layers: designed to be barely noticeable behind content. */
+.hero-bg {
+    background:
+        radial-gradient(ellipse 46% 54% at 94% 40%,
+            rgba(37, 99, 235, 0.13) 0%,
+            rgba(37, 99, 235, 0.045) 43%,
+            transparent 78%),
+        radial-gradient(ellipse 42% 36% at 78% 87%,
+            rgba(6, 182, 212, 0.045) 0%, transparent 80%),
+        radial-gradient(ellipse 28% 35% at 10% 16%,
+            rgba(37, 99, 235, 0.025) 0%, transparent 75%),
+        var(--bg-primary);
+}
+
+/* Light technical grid, visible mostly in empty space at the right. */
+.hero-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.3;
+    background-image:
+        linear-gradient(rgba(96, 165, 250, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(96, 165, 250, 0.055) 1px, transparent 1px);
+    background-size: 84px 84px;
+    -webkit-mask-image: linear-gradient(90deg, transparent 28%, transparent 48%, #000 100%);
+    mask-image: linear-gradient(90deg, transparent 28%, transparent 48%, #000 100%);
+}
+
+/* Very slow, restrained streak of light (no hard-edged circles). */
+.hero-bg::after {
+    content: "";
+    position: absolute;
+    inset: -12%;
+    pointer-events: none;
+    background: linear-gradient(115deg,
+        transparent 44%,
+        rgba(56, 189, 248, 0.012) 49%,
+        rgba(59, 130, 246, 0.035) 53%,
+        transparent 62%);
+    animation: kgmHeroLightDrift 19s ease-in-out infinite alternate;
+}
+
+@keyframes kgmHeroLightDrift {
+    from { transform: translateX(-2.5%); opacity: 0.35; }
+    to   { transform: translateX(2.5%); opacity: 0.65; }
+}
+
+/* Reduce the oversized gap between the profile and slogan. */
+.hero-profile {
+    margin-top: clamp(26px, 4vh, 46px);
+    margin-bottom: clamp(18px, 2.6vw, 30px);
+}
+.hero-headline { margin-top: 14px; margin-bottom: 18px; }
+.hero-quote { margin-top: 12px; margin-bottom: 14px; }
+.hero-intro { margin-top: 12px; margin-bottom: 20px; }
+.hero-skills { margin-top: 14px; margin-bottom: 26px; }
+
+/* Keep the supplied photograph sharp, without artificially jagged edges. */
+.profile-image {
+    image-rendering: auto;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.06);
+}
+.profile-image:hover {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.13);
+}
+
+/* Improve text contrast when a light theme is selected. */
+html[data-theme="light"] .hero-bg {
+    background:
+        radial-gradient(ellipse 46% 54% at 94% 40%, rgba(37, 99, 235, 0.075), transparent 75%),
+        var(--bg-primary);
+}
+
+@media (max-width: 768px) {
+    .hero-profile { margin-top: 18px; margin-bottom: 22px; }
+    .hero-headline { margin-top: 10px; margin-bottom: 16px; }
+    .hero-quote { margin-top: 12px; margin-bottom: 12px; }
+    .hero-intro { margin-top: 10px; margin-bottom: 16px; }
+    .hero-skills { margin-top: 12px; margin-bottom: 20px; }
+    .hero-bg::before { opacity: 0.12; }
+    .hero-bg::after { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-bg::after { animation: none; }
+}
+/* === KGM HERO POLISH END === */
